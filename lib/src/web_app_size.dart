@@ -2253,7 +2253,9 @@ class WebAppSize {
     screenWidth = _mediaQueryData!.size.width;
     screenHeight = _mediaQueryData!.size.height;
     orientation = _mediaQueryData!.orientation;
-
+    SquareEquation =
+    ((screenHeight! * screenHeight!) + (screenWidth! * screenWidth!));
+    Diameter = sqrt(SquareEquation!);
     /// ########################################################################
     /// ##########################################(803.6)##################
     /// default
@@ -5985,8 +5987,6 @@ class WebAppSize {
     WebSize_743 = Diameter! / 1.6906735506098023;
     WebSize_744 = Diameter! / 1.6884011399234988;
     WebSize_745 = Diameter! / 1.6861348296685679;
-    SquareEquation =
-        ((screenHeight! * screenHeight!) + (screenWidth! * screenWidth!));
-    Diameter = sqrt(SquareEquation!);
+
   }
 }

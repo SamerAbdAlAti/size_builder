@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
- size_builder:0.0.1
+ size_builder:0.0.4
 
 ## Features
 
@@ -21,7 +21,7 @@ Make a proportion and proportion to the length, width, and diameter of the scree
 ## Getting started
 
 ```yaml
-size_builder: 0.0.1
+size_builder: 0.0.3
 ```
 
 
@@ -32,7 +32,7 @@ flutter pub add size_builder
 
 ## How to use
 
-At first, you should to add in class first screen class 
+At first, you should to add in  first screen class 
 #### for Web
 ```dart
 WebAppSize().init(context);
@@ -117,3 +117,7 @@ child :Text('hello flutter',
  
 ),
 ```
+
+### Stay tuned for strong updates in the future.
+#### With best regards, Samer Abd Al Ati
+
