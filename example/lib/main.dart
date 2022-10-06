@@ -1,4 +1,4 @@
-import 'package:example/app_sizes.dart';
+import 'package:example/src/web_app_size.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -69,9 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
     /// ##############################
     ///
 
-    AppSize().init(context);
-
-
+    WebAppSize().init(context);
 
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -80,22 +78,20 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-
-      body: Center(
-        child: Container(
-          height: AppSize.height_100,
-          width: AppSize.height_200,
-          decoration: BoxDecoration(
-            color: Colors.amber,
-            borderRadius: BorderRadius.circular(AppSize.size_16!),
-          ),
+        appBar: AppBar(
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
         ),
-      )
-    );
+        body: Center(
+          child: Container(
+            height: WebAppSize.WebHeight_200,
+            width: WebAppSize.WebHeight_300,
+            decoration: BoxDecoration(
+              color: Colors.amber,
+              borderRadius: BorderRadius.circular(WebAppSize.WebSize_20!),
+            ),
+          ),
+        ));
   }
 }

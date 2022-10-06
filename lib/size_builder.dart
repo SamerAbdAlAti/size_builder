@@ -1,3 +1,4 @@
 library size_builder;
 
-export 'src/app_sizes.dart';
+export 'src/mobile_app_size.dart';
+export 'src/web_app_size.dart';
