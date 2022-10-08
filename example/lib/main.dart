@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Size_builder : '),
     );
   }
 }
@@ -70,6 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
     ///
 
     WebAppSize().init(context);
+    print(WebAppSize.screenWidth);
 
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -78,20 +79,35 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-        appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text(widget.title),
+      appBar: AppBar(
+        // Here we take the value from the MyHomePage object that was created by
+        // the App.build method, and use it to set our appbar title.
+        title: Text(widget.title),
+      ),
+      body: WebAppSize.Responsive(
+
+        Size1: WebAppSize.screenWidth! > 1300,
+        Screen1: Container(
+          color: Colors.red,
         ),
-        body: Center(
-          child: Container(
-            height: WebAppSize.WebHeight_200,
-            width: WebAppSize.WebHeight_300,
-            decoration: BoxDecoration(
-              color: Colors.amber,
-              borderRadius: BorderRadius.circular(WebAppSize.WebSize_20!),
-            ),
-          ),
-        ));
+
+        Size2: WebAppSize.screenWidth! <= 1300 && WebAppSize.screenWidth! >= 900,
+        Screen2: Container(
+          color: Colors.blue,
+        ),
+
+        Size3: WebAppSize.screenWidth! < 900 && WebAppSize.screenWidth! >= 700,
+        Screen3: Container(
+          color: Colors.amber,
+        ),
+
+        Size4: WebAppSize.screenWidth! < 700,
+        Screen4: Container(
+          color: Colors.green,
+        ),
+
+        ScreenElse: Container(),
+      ),
+    );
   }
 }

@@ -1,6 +1,6 @@
 name: size_builder
 description: Make a proportion and proportion to the length, width, and diameter of the screens of all kinds to get a responsive design.
-version: 0.0.4
+version: 0.0.7
 
 homepage: https://github.com/SamerAbdAlAti/size_builder
 
@@ -9,6 +9,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  lints: ^2.0.0
   flutter:
     sdk: flutter
 
@@ -16,14 +17,15 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  lints: ^2.0.0
 
 
 
 flutter:
 
   # To add assets to your package, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
+  assets:
+   - assets/images/
   #   - images/a_dot_ham.jpeg
   #
   # For details regarding assets in packages, see
