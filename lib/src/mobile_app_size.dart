@@ -4861,7 +4861,7 @@ class MobileAppSize {
     Widget? Screen8,
     bool? Size9,
     Widget? Screen9,
-    bool? elseBool,
+
     Widget? ScreenElse,
     var DoWhenScreen1,
     var DoWhenScreen2,
@@ -4901,7 +4901,7 @@ class MobileAppSize {
     } else if (Size9!) {
       DoWhenScreen9;
       return Screen9!;
-    } else if (elseBool!) {
+    } else if (true) {
       DoWhenScreenelse;
       return ScreenElse!;
     }
