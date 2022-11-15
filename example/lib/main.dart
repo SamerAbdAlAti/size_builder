@@ -1,4 +1,4 @@
-import 'package:example/src/web_app_size.dart';
+import 'package:example/src/app_size.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -49,28 +49,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     ///########################################
     ///
     /// ##############################
     ///
-
-    WebAppSize().init(context);
-    print(WebAppSize.screenWidth);
+    Scaling.scaling(context);
 
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
@@ -84,29 +69,20 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: WebAppSize.Responsive(
-
-        Size1: WebAppSize.screenWidth! > 1300,
-        Screen1: Container(
-          color: Colors.red,
+      body: Center(
+        child: Container(
+          height: Scaling.H(200),
+          width: Scaling.W(200),
+          decoration: BoxDecoration(
+              color: Colors.green,
+              borderRadius: BorderRadius.circular(Scaling.S(30))),
+          child: Text(
+            "Scaling",
+            style: TextStyle(
+              fontSize: Scaling.S(20),
+            ),
+          ),
         ),
-
-        Size2: WebAppSize.screenWidth! <= 1300 && WebAppSize.screenWidth! >= 900,
-        Screen2: Container(
-          color: Colors.blue,
-        ),
-
-        Size3: WebAppSize.screenWidth! < 900 && WebAppSize.screenWidth! >= 700,
-        Screen3: Container(
-          color: Colors.amber,
-        ),
-
-        Size4: WebAppSize.screenWidth! < 700,
-        Screen4: Container(
-          color: Colors.green,
-        ),
-
-        ScreenElse: Container(),
       ),
     );
   }

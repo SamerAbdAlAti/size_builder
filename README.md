@@ -50,116 +50,26 @@ You can make a smooth multi-form screen
 
 
 ## How to use
-At first, you should to add in  first screen class 
-#### for Web
+At first, you should to add in all screens Scaling class and send (Build context) 
+
 ```dart
-WebAppSize().init(context);
+  Scaling.scaling(context);
 ```
-#### for Mobile
+<h4>You can use it for do responsive Height and Width </h4>
+
 ```dart
-MobileAppSize().init(context);
+            height: Scaling.H(200),
+            width: Scaling.W(200),
 ```
-
-### Example 
-#### for Mobile
-
-```dart
-
-class HomeLayout extends StatelessWidget {
-  const HomeLayout({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-
-    MobileAppSize().init(context);
-    
-    return Scaffold();
-  }
-}
-
-```
-#### for Web
+<h4>And you can use it for create responsive size </h4>
+<p>for font size or any thing </p>
 
 ```dart
-
-class HomeLayout extends StatelessWidget {
-  const HomeLayout({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-
-    WebAppSize().init(context);
-    
-    return Scaffold();
-  }
-}
-
-```
-Then you can use this.
-```dart
-WebAppSize.Responsive(
-        
-        Size1: WebAppSize.screenWidth! > 1300,
-        Screen1: Container(
-          color: Colors.red,
-        ),
-
-        Size2: WebAppSize.screenWidth! <= 1300 && WebAppSize.screenWidth! >= 900,
-        Screen2: Container(
-          color: Colors.blue,
-        ),
-        
-        Size3: WebAppSize.screenWidth! < 900 && WebAppSize.screenWidth! >= 700,
-        Screen3: Container(
-          color: Colors.amber,
-        ),
-        
-        Size4: WebAppSize.screenWidth! < 700,
-        Screen4: Container(
-          color: Colors.green,
-        ),
-
-        ScreenElse: Container(),
-      ),
-```
-
-you can use it for many things:
-
-### Container Size
-```dart
-Container(
-
- height : MobileAppSize.Height200,
- width : MobileAppSize.Width390,
-
-),
-```
-### Or
-```dart
-Container(
-
- height : WebAppSize.Height200,
- width : WebAppSize.Width390,
-
-),
-```
-
-You can add it for font size
-```dart
-Container(
-
-height : WebAppSize.Height200,
-width : WebAppSize.Width390,
-
-child :Text('hello flutter', 
-
- style: TextStyle(
-  
-     fontSize: MobileSize.Size20,
-   
-    ),
-  )
- 
+ Text(
+"Scaling",
+style: TextStyle(
+fontSize: Scaling.S(20),
+   ),
 ),
 ```
 

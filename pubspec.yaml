@@ -1,6 +1,6 @@
 name: size_builder
 description: Make a proportion and proportion to the length, width, and diameter of the screens of all kinds to get a responsive design.
-version: 0.0.8
+version: 0.0.9
 
 homepage: https://github.com/SamerAbdAlAti/size_builder
 
@@ -9,15 +9,13 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  lints: ^2.0.0
+
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
+  lints: ^2.0.1
 
-dev_dependencies:
-  flutter_test:
-    sdk: flutter
-  flutter_lints: ^2.0.0
-  lints: ^2.0.0
+
 
 
 
